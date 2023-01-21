@@ -13,8 +13,8 @@
     {{ if or (.Params.author) (.Params.date) }}
         <p>
             {{ if .Params.author }}By {{ .Params.author }}{{ if .Date }}, {{ end }}{{ end }}
-            {{ if .Date }}{{ .Date.Format "2006-01-02" }}{{ end }}{{ $t := (.Site.GetPage "taxonomyTerm" "tags").Pages }}
-	    {{ if .Params.tags }}<br><small><i> {{ range $thistag := .Params.tags }}{{ range $alltags := $t }}{{ if eq $thistag $alltags.Name }}<a href="{{ $alltags.Permalink }}">{{ $thistag }}</a> {{ end}}{{ end}}{{ end}} </i></small>{{ end }}
+            {{ if .Date }}{{ .Date.Format "2006-01-02" }}{{ end }}
+	    {{ if .Params.tags }}<br><small><i> {{ range $thistag := .Params.tags }}{{ range $alltags := ($.Site.GetPage "taxonomyTerm" "tags").Pages }}{{ if eq $thistag $alltags.Name }}<a href="{{ $alltags.Permalink }}">{{ $thistag }}</a> {{ end}}{{ end}}{{ end}} </i></small>{{ end }}
         </p>
     {{ end }}
 {{ end }}
