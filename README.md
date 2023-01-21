@@ -9,13 +9,13 @@ rizotto is a minimalist, responsive [hugo](https://gohugo.io) theme inspired by 
 The easiest way to install the theme is to clone this repository into your site's `themes` directory:
 
 ```shell
-git clone https://github.com/joeroe/rizotto themes/rizotto
+git clone https://github.com/zfkdnop/rizotto themes/rizotto
 ```
 
 If your site is already a git repository, you can add the theme as a submodule instead:
 
 ```shell
-git submodule add https://github.com/joeroe/rizotto.git themes/rizotto
+git submodule add https://github.com/zfkdnop/rizotto.git themes/rizotto
 ```
 
 ## Update
